@@ -1,9 +1,13 @@
 /* Estilos del Menú */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Times, serif, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url('Recourse\Img\estudiantes-600x348.png'); /* Ruta corregida */
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .menu-container {
@@ -51,54 +55,115 @@ body {
   font-size: 18px;
 }
 
-.sidebar-button {
-  color: #09bddd;
+.sidebar a {
+  color: #fff;
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  display: block;
   margin: 20px 0;
   font-size: 18px;
-  padding: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
-.sidebar-button i {
+.sidebar a i {
   margin-right: 10px;
 }
 
-.sidebar-button:hover {
-  background-color: #0056b3;
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 .content {
   margin-left: 200px; /* Offset for the fixed sidebar */
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
-  justify-content: center; /* Center content vertically */
   height: 100vh;
+  width: calc(100% - 200px); /* Ajuste por el ancho de la barra lateral */
   padding: 20px;
-  transition: margin-left 0.3s ease;
+  box-sizing: border-box;
+  text-align: center; /* Asegura que todo el texto esté centrado */
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para legibilidad */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.header-text {
+  margin-bottom: 20px;
+  display: center center;
+  justify-content: flex-end; /* Mueve el h1 a la derecha */
+  width: 100%;
+}
+
+.header-text h1 {
+  color: #007BFF;
+  font-size: 50px;
+  margin: 0;
+}
+
+.button-container {
+  display: center center;
+  gap: 10px;
+  justify-content: flex-end; /* Mueve los botones a la derecha */
+  width: 100%;
+}
+
+button {
+  padding: 20px 40px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  display: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+button i {
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.header-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.header-image-container img {
+  max-height: 150px;
+  height: auto;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800%;
+  margin-top: 40px;
+}
+
+.image-container img {
+  max-width: 200%;
+  height: auto;
+  object-fit: cover; 
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .menu-container {
-      flex-direction: column;
-  }
-
   .sidebar {
-      width: 100%;
-      padding: 10px;
-      left: 0;
-  }
-
-  .menu-icon {
-      display: block;
+    left: -200px;
   }
 
   .content {
-      margin-left: 0;
+    margin-left: 0;
+    width: 100%;
   }
 }

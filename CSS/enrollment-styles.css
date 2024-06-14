@@ -1,7 +1,7 @@
 /* Estilos para el formulario de matrícula */
 .enrollment-content {
   max-width: 1000px;
-  margin: 0 auto;
+  align-self: flex-end ;
 }
 
 form {
@@ -47,7 +47,7 @@ input[type="radio"] {
 
 button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #0542c5;
   color: white;
   border: none;
   cursor: pointer;

@@ -1,6 +1,7 @@
 /* Estilos de Estadísticas */
 .statistics-content {
     width: 100%;
+    
 }
 
 .header-text {
@@ -18,8 +19,8 @@
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    max-width: 600px;
+    gap: 5px;
+    max-width: 5px;
     margin: 0 auto;
 }
 
@@ -33,7 +34,7 @@
 .form-grid input[type="checkbox"],
 .form-grid button {
     width: 100%;
-    padding: 8px;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -43,7 +44,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     transition: background-color 0.3s ease;
 }
 
