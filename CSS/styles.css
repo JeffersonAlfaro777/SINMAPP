@@ -1,23 +1,110 @@
 /* Estilos del Menú */
-body {
-  font-family: Times, serif, sans-serif;
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
-  background-image: url('Recourse\Img\estudiantes-600x348.png'); /* Ruta corregida */
-  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.menu-container {
+body {
+  background-image: url("../Resources/img/cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.sideBar {
+  background-color: white;
+  width: "max-content";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1em;
+  box-shadow: 3px 0 6px #00000035;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.sideBar[data-open="false"] {
+  transform: translateX(-100%);
+
+}
+
+.sideBar[data-open="true"] {
+  transform: translateX(0);
+}
+
+.closeSideBarBtn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1em 0;
+  border-bottom: 2px solid #0056b335;
+}
+
+.closeSideBarBtn i {
+  font-size: 1.5em;
+  color: #1b1b1b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.closeSideBarBtn i:hover {
+  transform: scale(1.15);
+  color: #0056b3;
+}
+
+
+.mainContent {
+  height: 100%;
+}
+
+.navBar {
+  padding: 1em;
+  background-color: #007bff;
+}
+
+.navBar a {
+  color: white;
+  font-size: 1.5em;
+  text-shadow: "0 3px 6px #00000035";
+}
+
+.btnPanelControl {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 40px;
+  background-color: #1b1b1b;
+  box-shadow: 0 3px 6px #00000035;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btnPanelControl:hover {
+  background-color: #0056b3;
+}
+
+/*
+*/
+/* .menu-container {
   display: flex;
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
-}
+} */
 
-.sidebar {
+/* .sidebar {
   width: 200px;
   background-color: #007BFF;
   color: #fff;
@@ -29,16 +116,16 @@ body {
   height: 100%;
   transition: left 0.3s ease;
   overflow-y: auto;
-}
+} */
 
-.sidebar .menu-icon {
+/* .sidebar .menu-icon {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
   position: absolute;
   top: 20px;
   left: 220px;
-}
+} */
 
 .profile-section {
   display: flex;
@@ -55,90 +142,23 @@ body {
   font-size: 18px;
 }
 
-.sidebar a {
+/* .sidebar a {
   color: #fff;
   text-decoration: none;
   display: block;
   margin: 20px 0;
   font-size: 18px;
-}
+} */
 
-.sidebar a i {
+/* .sidebar a i {
   margin-right: 10px;
-}
-
+} */
+/* 
 .sidebar a:hover {
   text-decoration: underline;
-}
+} */
 
-.content {
-  margin-left: 200px; /* Offset for the fixed sidebar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: calc(100% - 200px); /* Ajuste por el ancho de la barra lateral */
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center; /* Asegura que todo el texto esté centrado */
-  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para legibilidad */
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-.header-text {
-  margin-bottom: 20px;
-  display: center center;
-  justify-content: flex-end; /* Mueve el h1 a la derecha */
-  width: 100%;
-}
-
-.header-text h1 {
-  color: #007BFF;
-  font-size: 50px;
-  margin: 0;
-}
-
-.button-container {
-  display: center center;
-  gap: 10px;
-  justify-content: flex-end; /* Mueve los botones a la derecha */
-  width: 100%;
-}
-
-button {
-  padding: 20px 40px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  display: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-button i {
-  margin-right: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.header-image-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-.header-image-container img {
-  max-height: 150px;
-  height: auto;
-}
-
+/* 
 .image-container {
   position: absolute;
   top: 0;
@@ -154,10 +174,10 @@ button:hover {
   max-width: 200%;
   height: auto;
   object-fit: cover; 
-}
+} */
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sidebar {
     left: -200px;
   }
@@ -166,4 +186,4 @@ button:hover {
     margin-left: 0;
     width: 100%;
   }
-}
+} */
