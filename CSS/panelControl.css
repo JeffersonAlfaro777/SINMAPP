@@ -22,15 +22,27 @@
   column-gap: 20px;
   justify-content: center; /* Mueve los botones a la derecha */
 }
-
-
-.header-image-container {
-  display: flex;
-  justify-self: flex-start;
+.sidebar .menu-icon {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 220px;
 }
 
-.header-image-container img {
-  max-height: 150px;
-  height: auto;
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-section i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.profile-section span {
+  font-size: 18px;
 }
 

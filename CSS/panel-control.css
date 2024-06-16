@@ -1,4 +1,4 @@
-Estilos del Menú y Panel de Control
+/*
 .menu-container {
     display: flex;
     height: 100vh;
@@ -17,7 +17,7 @@ Estilos del Menú y Panel de Control
     height: 100%;
     transition: left 0.3s ease;
     overflow-y: auto;
-    /* Añadido para scroll vertical */
+    /* Añadido para scroll vertical 
 }
 
 .sidebar .menu-icon {
@@ -59,13 +59,4 @@ Estilos del Menú y Panel de Control
 .sidebar a:hover {
     text-decoration: underline;
 }
-
-.content {
-    margin-left: 200px; /* Offset for the fixed sidebar */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-    justify-content: center; /* Center content vertically */
-    height: 100vh;
-    width: 100%;
-}
+/*

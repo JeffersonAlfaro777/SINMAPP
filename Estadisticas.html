@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Menú</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Estadísticas</title>
+    <link rel="stylesheet" href="CSS\stylesEstaditicas.css">
     <link rel="stylesheet" href="CSS/panelControl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
@@ -33,27 +33,35 @@
             <div class="navBar">
                 <a href="#" class="menu-icon" onclick="toggleSidebar()"><i class="fa fa-bars"></i></a>
             </div>
-
             <div class="content">
-                <!-- --Aqui iria el contenido de cada pagina -->
-                <!-- Imagen superior -->
-                <div class="header-image-container">
-                    <img src="./Resources/Img/logo-mined-gobierno-1-1-1.png" alt="Descripción de la imagen">
+                <div class="header-text">
+                    <h1>Estadísticas</h1>
                 </div>
-                <!-- Fin de la imagen superior -->
-                <span class="header-text">Sistema Estadístico de Matrícula</span>
-
-
-                <div class="button-container">
-                    <button class="btnPanelControl" onclick="navigateTo('Matricula.html')"><i
-                            class="fa fa-id-card"></i> Matrícula</button>
-                    <button class="btnPanelControl" onclick="navigateTo('Estadisticas.html')"><i
-                            class="fa fa-chart-line"></i>
-                        Estadísticas</button>
+                <div class="statistics-content">
+                    <h2>Estadísticas</h2>
+                    <div class="form-grid">
+                        <div class="input-container">
+                            <label for="anos">Años:</label>
+                            <input type="checkbox" id="anos" name="anos">
+                        </div>
+                        <div class="input-container">
+                            <label for="mensuales">Mensuales:</label>
+                            <input type="checkbox" id="mensuales" name="mensuales">
+                        </div>
+                        <div class="input-container">
+                            <label for="fecha-inicial">Fecha Inicial:</label>
+                            <input type="date" id="fecha-inicial" name="fecha-inicial">
+                        </div>
+                        <div class="input-container">
+                            <label for="fecha-final">Fecha Final:</label>
+                            <input type="date" id="fecha-final" name="fecha-final">
+                        </div>
+                        <button type="button" onclick="verGrafico()">Ver Gráfico</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="JS/script.js"></script>
-</body>
-
-</html>
+        <script src="JS\script.js"></script>
+    </body>
+    </html>
+    
