@@ -1,0 +1,69 @@
+.content {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  flex-direction: column;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para legibilidad */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.header-text {
+  color: #0375ef;
+  font-weight: bold;
+  text-shadow: 0 3px 6px #00000015;
+  font-size: 50px;
+}
+
+.button-container {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center; /* Mueve los botones a la derecha */
+}
+.sidebar .menu-icon {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 220px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-section i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.profile-section span {
+  font-size: 18px;
+}
+.sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+.header{
+  color: white;
+  display: flex-end;
+  font-weight: bold;
+  text-shadow: 0 3px 6px #00000015;
+  font-size: 30px;
+}
