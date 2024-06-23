@@ -4,7 +4,7 @@ function validateLogin() {
     const errorMessage = document.getElementById('error-message');
 
     if (password === 'password') {
-        window.location.href = 'menu.html';
+        window.location.href = './menu.html';
         sessionStorage.setItem("token", Date.now().toString())
         sessionStorage.setItem("userName", `${username}`)
         return false;
