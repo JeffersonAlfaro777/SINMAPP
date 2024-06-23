@@ -10,6 +10,7 @@
 </head>
 
 <body>
+ 
     <div class="login-container">
         <h2>Bienvenido a SINMA</h2>
         <form onsubmit="return validateLogin()">
@@ -21,7 +22,7 @@
                 <i class="fa fa-lock"></i>
                 <input type="password" id="password" placeholder="Contraseña" required>
             </div>
-            <button type="submit">Iniciar Sesión</button>
+            <button type="submit"><a href="http:/localhost:3000/menu">Iniciar Sesión</button>
             <div id="error-message" class="error-message"></div>
         </form>
     </div>
@@ -29,7 +30,7 @@
     <script>
         const token = sessionStorage.getItem('token')
         if (token)
-            location.href = './menu.html'
+            location.href = './menu.ejs'
     </script>
 </body>
 

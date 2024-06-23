@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Datos</title>
+    <link rel="stylesheet" href="CSS\DatosBase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sideBar" id="sideBar" data-open="false">
+            <div class="closeSideBarBtn" onclick="toggleSidebar()">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="profile-section">
+                <i class="fa fa-user-circle"></i>
+                <span id="userName">
+                    <script>
+                        document.querySelector('#userName').textContent = sessionStorage.getItem('userName')
+                    </script>
+                </span>
+            </div>
+            <a href="#"><i class="fa fa-home"></i> Inicio</a>
+            <a href="Matricula.html"><i class="fa fa-id-card"></i> Matrícula</a>
+            <a href="Estadisticas.html"><i class="fa fa-chart-line"></i> Estadísticas</a>
+            <a href="Datos.html"><i class="fa fa-database"></i> Datos</a>
+            <span onclick="logout()">Cerrar Sesion</span>
+        </div>
+        <div class="mainContent">
+            <div class="navBar">
+                <a href="#" class="menu-icon" onclick="toggleSidebar()"><i class="fa fa-bars"></i></a>
+                <span class="header">SINMA</span>
+            </div>
+
+            <div class="content">
+                <h2>Datos Estudiantes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Apellido</th>
+                            <th>Segundo Apellido</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Sexo</th>
+                            <th>Departamento</th>
+                            <th>Municipio</th>
+                            <th>Discapacidad</th>
+                            <th>Tipo de Sangre</th>
+                            <th>Lugar de Nacimiento</th>
+                            <th>Correo Electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Residencia</th>
+                            <th>Direccion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table">
+                        <!-- Los datos serán insertados aquí por JavaScript -->
+                    </tbody>
+                </table>
+                <div class="button-container">
+                    <button class="button">Actulizar</button>
+                    <button class="button">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS\script.js"></script>
+    <script src="JS\BD.js"></script>
+</body>
+</html>

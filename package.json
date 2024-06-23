@@ -1,5 +1,5 @@
 {
-  "name": "sinmapp",
+  "name": "sinma",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mysql": "^2.18.1"
-  }
+  },
+  "description": ""
 }
